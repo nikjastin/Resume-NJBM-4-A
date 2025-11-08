@@ -421,6 +421,87 @@ body {
     font-weight: bold;
 }
 
+/* PMI Certification */
+.pmi-cert {
+    background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%);
+    border-left: 5px solid #7b1fa2;
+    position: relative;
+}
+
+.pmi-cert::before {
+    content: 'PMI';
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: #7b1fa2;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75em;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.pmi-cert:hover {
+    box-shadow: 0 5px 20px rgba(123, 31, 162, 0.3);
+    transform: translateY(-3px);
+}
+
+.pmi-cert h3 {
+    color: #4a148c;
+    padding-right: 80px;
+    font-size: 1.25em;
+}
+
+.pmi-cert .institution {
+    color: #7b1fa2;
+}
+
+.pmi-cert strong {
+    color: #6a1b9a;
+    font-weight: 700;
+}
+
+/* Conference Certificate */
+.conference-cert {
+    background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+    border-left: 5px solid #ef6c00;
+    position: relative;
+}
+
+.conference-cert::before {
+    content: 'INTL';
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: #ef6c00;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75em;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.conference-cert:hover {
+    box-shadow: 0 5px 20px rgba(239, 108, 0, 0.3);
+    transform: translateY(-3px);
+}
+
+.conference-cert h3 {
+    color: #e65100;
+    padding-right: 80px;
+}
+
+.conference-cert .institution {
+    color: #f57c00;
+}
+
+.conference-cert strong {
+    color: #ef6c00;
+    font-weight: 700;
+}
+
 /* Footer */
 .footer {
     background: #2c3e50;
