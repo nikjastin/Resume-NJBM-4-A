@@ -17,20 +17,21 @@ const TechnicalSkills = () => {
   ];
 
   return (
-    <section className="py-8 px-10 border-b border-gray-200 bg-gradient-to-br from-gray-50 to-white">
-      <h2 className="text-3xl font-bold text-primary mb-6 pb-3 border-b-4 border-secondary inline-block">
-        💻 Technical Skills
+    <section className="py-10 px-6 md:px-10 border-b border-gray-100 bg-gradient-to-br from-primary-50 via-white to-secondary-50">
+      <h2 className="text-3xl md:text-4xl font-bold text-primary-800 mb-8 flex items-center gap-3">
+        <span className="w-2 h-10 bg-gradient-to-b from-primary-600 to-secondary-600 rounded-full"></span>
+        💻 Technical Stack
       </h2>
-      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-5 mt-8">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6 mt-8">
         {skills.map((skill, index) => (
           <div 
             key={index}
-            className="bg-white rounded-xl p-6 text-center transition-all duration-300 shadow-md hover:shadow-2xl hover:-translate-y-3 border-2 border-transparent hover:border-secondary"
+            className="group bg-white rounded-2xl p-5 text-center transition-all duration-300 shadow-md hover:shadow-2xl hover:-translate-y-4 border-2 border-gray-100 hover:border-transparent"
           >
-            <div className={`w-20 h-20 mx-auto mb-4 rounded-xl bg-gradient-to-br ${skill.bg} flex items-center justify-center text-white ${skill.textColor || ''} font-bold text-xl shadow-lg transform transition-transform hover:scale-110 hover:rotate-6`}>
+            <div className={`w-16 h-16 md:w-20 md:h-20 mx-auto mb-4 rounded-xl bg-gradient-to-br ${skill.bg} flex items-center justify-center text-white ${skill.textColor || ''} font-bold text-lg md:text-xl shadow-lg transform transition-all group-hover:scale-125 group-hover:rotate-12`}>
               {skill.text}
             </div>
-            <p className="font-semibold text-gray-800 text-sm">{skill.name}</p>
+            <p className="font-semibold text-gray-800 text-xs md:text-sm group-hover:text-primary-700 transition-colors">{skill.name}</p>
           </div>
         ))}
       </div>

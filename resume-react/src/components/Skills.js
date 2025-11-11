@@ -52,22 +52,25 @@ const Skills = () => {
   ];
 
   return (
-    <section className="py-8 px-10 border-b border-gray-200">
-      <h2 className="text-3xl font-bold text-primary mb-6 pb-3 border-b-4 border-secondary inline-block">
-        Skills
+    <section className="py-10 px-6 md:px-10 border-b border-gray-100 bg-gradient-to-br from-gray-50 to-white">
+      <h2 className="text-3xl md:text-4xl font-bold text-primary-800 mb-8 flex items-center gap-3">
+        <span className="w-2 h-10 bg-gradient-to-b from-primary-600 to-secondary-600 rounded-full"></span>
+        Skills & Expertise
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
         {skillCategories.map((category, index) => (
           <div 
             key={index}
-            className="bg-gradient-to-br from-gray-50 to-blue-50 p-6 rounded-lg border-t-4 border-secondary shadow-md hover:shadow-xl transition-all hover:-translate-y-2"
+            className="group bg-white p-6 rounded-2xl border-2 border-gray-100 hover:border-transparent hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
           >
-            <h3 className="text-xl font-bold text-primary mb-4">{category.title}</h3>
-            <ul className="space-y-2">
+            <h3 className="text-2xl font-bold text-primary-700 mb-5 pb-3 border-b-2 border-primary-200 group-hover:border-primary-400 transition-colors">
+              {category.title}
+            </h3>
+            <ul className="space-y-3">
               {category.skills.map((skill, idx) => (
-                <li key={idx} className="flex items-start">
-                  <span className="text-secondary font-bold text-lg mr-2">▹</span>
-                  <span className="text-gray-700">{skill}</span>
+                <li key={idx} className="flex items-start group/item">
+                  <span className="text-secondary-600 font-bold text-xl mr-3 mt-0.5 group-hover/item:scale-125 transition-transform">▹</span>
+                  <span className="text-gray-700 group-hover/item:text-gray-900 group-hover/item:translate-x-1 transition-all">{skill}</span>
                 </li>
               ))}
             </ul>
